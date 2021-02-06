@@ -42,6 +42,7 @@ function App() {
           min="1" 
           className="input" 
           name="kill" 
+          placeholder="Enemies slain"
           value={kills} 
           onChange={e => setKills(e.target.value)}>
         </input>  
@@ -52,7 +53,8 @@ function App() {
           type="number"
           min="1" 
           className="input" 
-          name="dropamount" 
+          name="dropamount"
+          placeholder="Drop amount" 
           value={dropAmount} 
           onChange={e => setDropAmount(e.target.value)}>
         </input>  
@@ -75,7 +77,7 @@ function App() {
 
       {calculateState ?
       <> 
-      <h1 className="Text">{dropChance} %</h1>
+      <h1 className="Text">Chance for a drop in {kills} kills is {dropChance} %</h1>
       {
       !dropAmount ?
         null 
